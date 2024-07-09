@@ -1,4 +1,5 @@
-import { type FC, type PropsWithChildren, type ReactNode } from "react";
+import { type PropsWithChildren } from "react";
+// import { type FC, type ReactNode } from "react";
 
 //1(for tye children type method -1)
 // interface Purpose {

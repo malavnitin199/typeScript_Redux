@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "./Header";
 import Section from "./Section";
-import InfoBox from "../dynamicFlexibleComponent/InfoBox";
+import InfoBox from "../dynamicComponent/InfoBox";
 export type GoalType = { id: number; title: string; discription: string };
 
 function Main() {
