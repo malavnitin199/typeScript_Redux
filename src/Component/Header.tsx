@@ -16,9 +16,12 @@ const inp: { width: string; heigth: string } = {
   width: "220px",
   heigth: "50px",
 };
+
+
 function Header({ image, AddGoal, children }: HeaderProp) {
   const title = useRef<HTMLInputElement>(null);
   const goal = useRef<HTMLInputElement>(null);
+  
   function hadleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const enteredGoal = goal.current!.value;
@@ -32,8 +35,11 @@ function Header({ image, AddGoal, children }: HeaderProp) {
       title: enteredGoal,
       discription: enteredtitle,
     });
-    goal.current!.value = "";
-    title.current!.value = "";
+
+    // better way to reset the form:::::
+    e.currentTarget.reset();
+    // goal.current!.value = "";
+    // title.current!.value = "";
   }
   return (
     <div

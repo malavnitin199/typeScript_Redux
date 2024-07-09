@@ -1,10 +1,12 @@
 import { useState } from "react";
 import Header from "./Header";
 import Section from "./Section";
+import InfoBox from "../dynamicFlexibleComponent/InfoBox";
 export type GoalType = { id: number; title: string; discription: string };
 
 function Main() {
   const [goals, SetGoals] = useState<GoalType[]>([]);
+
   function AddGoal(newData: GoalType) {
     SetGoals((goal) => [...goal, newData]);
   }
@@ -19,6 +21,11 @@ function Main() {
       >
         Make your Todo'S
       </Header>
+      {goals.length > 0 ? (
+        <InfoBox mode={"warning"}>you HAVE TO COMPLETE YUOUR GOALS.</InfoBox>
+      ) : (
+        <InfoBox mode={"hint"}>you have to set your goals ....</InfoBox>
+      )}
       <Section goals={goals} />
     </div>
   );
