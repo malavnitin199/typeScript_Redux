@@ -5,7 +5,7 @@ import InfoBox from "../dynamicComponent/InfoBox";
 export type GoalType = { id: number; title: string; discription: string };
 
 function Main() {
-  const [goals, SetGoals] = useState<GoalType[]>([]);
+  const [goals, SetGoals] = useState<GoalType[]>([]);``
 
   function AddGoal(newData: GoalType) {
     SetGoals((goal) => [...goal, newData]);
