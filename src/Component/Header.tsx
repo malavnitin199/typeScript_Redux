@@ -21,7 +21,7 @@ function Header({ image, AddGoal, children }: HeaderProp) {
   const title = useRef<HTMLInputElement>(null);
   const goal = useRef<HTMLInputElement>(null);
 
-  function hadleSubmit(e: FormEvent<HTMLFormElement>) {
+function hadleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const enteredGoal = goal.current!.value;
     const enteredtitle = title.current!.value;
